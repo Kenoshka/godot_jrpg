@@ -1,0 +1,236 @@
+[gd_scene load_steps=7 format=3 uid="uid://cufqyhduu31pm"]
+
+[ext_resource type="Texture2D" uid="uid://gg8h1kc0rp6y" path="res://Assets/background.png" id="1_04fix"]
+[ext_resource type="Script" path="res://Source/menu.gd" id="1_tansv"]
+[ext_resource type="Texture2D" uid="uid://5mofx33pjyti" path="res://Assets/circle.png" id="2_7h0tk"]
+[ext_resource type="Texture2D" uid="uid://bmcurmxvbxdqk" path="res://Assets/circle_pressed.png" id="4_ljnbq"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_bvysy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y2e5l"]
+font_size = 30
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tansv")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_04fix")
+metadata/_edit_use_anchors_ = true
+
+[node name="Area" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 0.520833
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Buttons" type="Control" parent="Area"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FighterOneButt" type="TextureButton" parent="Area/Buttons"]
+self_modulate = Color(1, 1, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.188272
+anchor_top = 0.598333
+anchor_right = 0.327161
+anchor_bottom = 0.748333
+offset_top = -3.05176e-05
+offset_right = -1.52588e-05
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_bvysy")
+texture_normal = ExtResource("2_7h0tk")
+texture_pressed = ExtResource("4_ljnbq")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Area/Buttons/FighterOneButt"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "1"
+label_settings = SubResource("LabelSettings_y2e5l")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+metadata/_edit_use_anchors_ = true
+
+[node name="FighterTwoButt" type="TextureButton" parent="Area/Buttons"]
+self_modulate = Color(1, 1, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.66358
+anchor_top = 0.611667
+anchor_right = 0.802469
+anchor_bottom = 0.761667
+offset_left = -3.05176e-05
+toggle_mode = true
+button_group = SubResource("ButtonGroup_bvysy")
+texture_normal = ExtResource("2_7h0tk")
+texture_pressed = ExtResource("4_ljnbq")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Area/Buttons/FighterTwoButt"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "2"
+label_settings = SubResource("LabelSettings_y2e5l")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+metadata/_edit_use_anchors_ = true
+
+[node name="SupportButt" type="TextureButton" parent="Area/Buttons"]
+self_modulate = Color(0, 0.980392, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.412037
+anchor_top = 0.801666
+anchor_right = 0.550926
+anchor_bottom = 0.951666
+offset_right = 3.05176e-05
+toggle_mode = true
+button_group = SubResource("ButtonGroup_bvysy")
+texture_normal = ExtResource("2_7h0tk")
+texture_pressed = ExtResource("4_ljnbq")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Area/Buttons/SupportButt"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "3"
+label_settings = SubResource("LabelSettings_y2e5l")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+metadata/_edit_use_anchors_ = true
+
+[node name="ScoutButt" type="TextureButton" parent="Area/Buttons"]
+self_modulate = Color(0.603922, 0.419608, 1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.427469
+anchor_top = 0.0483333
+anchor_right = 0.566358
+anchor_bottom = 0.198333
+toggle_mode = true
+button_group = SubResource("ButtonGroup_bvysy")
+texture_normal = ExtResource("2_7h0tk")
+texture_pressed = ExtResource("4_ljnbq")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Area/Buttons/ScoutButt"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "4"
+label_settings = SubResource("LabelSettings_y2e5l")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+metadata/_edit_use_anchors_ = true
+
+[node name="Enemy" type="TextureRect" parent="Area"]
+self_modulate = Color(1, 0, 0, 0.611765)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.334877
+anchor_top = 0.261667
+anchor_right = 0.643519
+anchor_bottom = 0.595
+texture = ExtResource("2_7h0tk")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Options" type="Control" parent="."]
+anchors_preset = 0
+anchor_top = 0.520833
+anchor_right = 1.0
+anchor_bottom = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Options"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0905797
+anchor_right = 1.0
+anchor_bottom = 0.833333
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="StartButton" type="Button" parent="Options"]
+modulate = Color(0, 1, 0.164706, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.540123
+anchor_top = 0.84058
+anchor_right = 0.936728
+anchor_bottom = 0.981884
+text = "START"
+metadata/_edit_use_anchors_ = true
+
+[node name="ClearButton" type="Button" parent="Options"]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0555556
+anchor_top = 0.838768
+anchor_right = 0.452161
+anchor_bottom = 0.980072
+text = "CLEAR"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Options/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Options/ClearButton" to="." method="clear_choise"]

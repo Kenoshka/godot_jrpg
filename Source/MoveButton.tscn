@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci31xe3pfvr4i"]
+
+[ext_resource type="Script" path="res://Source/MoveButton.gd" id="1_aqski"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f64bx"]
+font_size = 14
+
+[sub_resource type="LabelSettings" id="LabelSettings_th654"]
+font_size = 12
+
+[node name="Move" type="Button"]
+anchors_preset = -1
+anchor_right = 0.193548
+anchor_bottom = 0.06
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_aqski")
+metadata/_edit_use_anchors_ = true
+
+[node name="MoveName" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.383333
+grow_horizontal = 2
+label_settings = SubResource("LabelSettings_f64bx")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MoveCost" type="Label" parent="."]
+modulate = Color(0, 1, 1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.333333
+anchor_right = 1.0
+anchor_bottom = 0.716667
+grow_horizontal = 2
+label_settings = SubResource("LabelSettings_th654")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,96 @@
+[gd_scene load_steps=8 format=3 uid="uid://cb5xxe4v4ngva"]
+
+[ext_resource type="Script" path="res://Source/character_option.gd" id="1_qgkgc"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_b77oo"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_igus5"]
+sky_material = SubResource("ProceduralSkyMaterial_b77oo")
+
+[sub_resource type="Environment" id="Environment_73kmi"]
+background_mode = 2
+sky = SubResource("Sky_igus5")
+tonemap_mode = 2
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_7bxc1"]
+viewport_path = NodePath("TextureRect/SubViewport")
+
+[sub_resource type="LabelSettings" id="LabelSettings_2op8e"]
+font_size = 30
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uhm2o"]
+font_size = 20
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="CharacterOption" type="Button"]
+custom_minimum_size = Vector2(648, 111)
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.0963542
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qgkgc")
+metadata/_edit_use_anchors_ = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_73kmi")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0308642
+anchor_top = 0.0990991
+anchor_right = 0.177469
+anchor_bottom = 0.900901
+offset_right = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_7bxc1")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="TextureRect"]
+transparent_bg = true
+
+[node name="Camera3D" type="Camera3D" parent="TextureRect/SubViewport"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.36736, 1.39031, 0.0777236)
+projection = 1
+size = 2.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.792464, 0.543638, -0.276512, 0.10882, 0.32006, 0.941127, 0.600133, -0.775899, 0.194477, 0, 1.11319, 3.38834)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.237654
+anchor_top = 0.106667
+anchor_right = 0.87963
+anchor_bottom = 0.533335
+grow_horizontal = 2
+grow_vertical = 2
+text = "123
+"
+label_settings = SubResource("LabelSettings_2op8e")
+justification_flags = 162
+metadata/_edit_use_anchors_ = true
+
+[node name="StatsLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.239198
+anchor_top = 0.353334
+anchor_right = 0.825617
+anchor_bottom = 0.780002
+grow_horizontal = 2
+grow_vertical = 2
+text = "123"
+label_settings = SubResource("LabelSettings_uhm2o")
+vertical_alignment = 1
+justification_flags = 162
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3mgjn8wm4nf2"]
+
+[ext_resource type="Script" path="res://Assets/SkillsScenes/RainBlades.gd" id="1_tw8jq"]
+[ext_resource type="PackedScene" uid="uid://cei3qgju2d2d" path="res://Assets/Skills/sword.glb" id="2_4cgrm"]
+
+[node name="RainBlades" type="Node3D"]
+script = ExtResource("1_tw8jq")
+
+[node name="Blades" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+
+[node name="Sketchfab_Scene" parent="Blades" instance=ExtResource("2_4cgrm")]
+transform = Transform3D(-0.2, 1.74846e-08, 0, -1.74846e-08, -0.2, 0, 0, 0, 0.2, 1.16607, 0.31131, 0)
+
+[node name="Sketchfab_Scene2" parent="Blades" instance=ExtResource("2_4cgrm")]
+transform = Transform3D(-0.2, 1.74846e-08, 0, -1.74846e-08, -0.2, 0, 0, 0, 0.2, -0.106589, 0.316618, -0.354452)
+
+[node name="Sketchfab_Scene5" parent="Blades" instance=ExtResource("2_4cgrm")]
+transform = Transform3D(-0.2, 1.74846e-08, 0, -1.74846e-08, -0.2, 0, 0, 0, 0.2, 0.540996, -0.0780402, -1.31368)
+
+[node name="Sketchfab_Scene3" parent="Blades" instance=ExtResource("2_4cgrm")]
+transform = Transform3D(-0.2, 1.74846e-08, 0, -1.74846e-08, -0.2, 0, 0, 0, 0.2, 0, 0.157052, 0.892946)
+
+[node name="Sketchfab_Scene6" parent="Blades" instance=ExtResource("2_4cgrm")]
+transform = Transform3D(-0.2, 1.74846e-08, 0, -1.74846e-08, -0.2, 0, 0, 0, 0.2, -1.02433, 0.0709481, 0.310432)
+
+[node name="Sketchfab_Scene4" parent="Blades" instance=ExtResource("2_4cgrm")]
+transform = Transform3D(-0.2, 1.74846e-08, 0, -1.74846e-08, -0.2, 0, 0, 0, 0.2, -0.906079, 0.39766, -0.77627)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[node name="FreeTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="FreeTimer" to="." method="_on_free_timer_timeout"]

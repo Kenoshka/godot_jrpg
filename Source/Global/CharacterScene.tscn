@@ -1,0 +1,205 @@
+[gd_scene load_steps=7 format=3 uid="uid://dqkvihaq3wreu"]
+
+[ext_resource type="Script" path="res://Source/Global/Character.gd" id="1_lb4tl"]
+[ext_resource type="Texture2D" uid="uid://q7mq72fq0lsw" path="res://Assets/arrow.png" id="2_v4k6o"]
+[ext_resource type="PackedScene" uid="uid://codw3xqw5npn8" path="res://Assets/CharScenes/Arrow/Arrow.tscn" id="4_3lrkh"]
+[ext_resource type="PackedScene" uid="uid://ep6sy27wcod6" path="res://Assets/CharScenes/Bush/Bush.tscn" id="4_ayoqw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rsxhb"]
+font_size = 40
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rh8ka"]
+font_size = 30
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[node name="CharacterScene" type="Node3D"]
+script = ExtResource("1_lb4tl")
+
+[node name="Healthbar" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Model" type="Node3D" parent="."]
+
+[node name="MainCamera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2.5, 3.5)
+fov = 90.0
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.091
+grow_horizontal = 2
+text = "Name"
+label_settings = SubResource("LabelSettings_rsxhb")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HPLabel" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.066
+anchor_right = 0.985484
+anchor_bottom = 0.108
+grow_horizontal = 2
+text = "? / ? HP"
+label_settings = SubResource("LabelSettings_rh8ka")
+horizontal_alignment = 2
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HPBar" type="ProgressBar" parent="UI"]
+modulate = Color(0.0156863, 0.976471, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00967742
+anchor_top = 0.075
+anchor_right = 0.677419
+anchor_bottom = 0.102
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="APLabel" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0016129
+anchor_top = 0.11
+anchor_right = 0.987097
+anchor_bottom = 0.152
+grow_horizontal = 2
+text = "? / ? AP"
+label_settings = SubResource("LabelSettings_rh8ka")
+horizontal_alignment = 2
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="APBar" type="ProgressBar" parent="UI"]
+modulate = Color(0, 0.611765, 0.996078, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0112903
+anchor_top = 0.119
+anchor_right = 0.679032
+anchor_bottom = 0.146
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="MovesContainer" type="GridContainer" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.522581
+anchor_top = 0.807
+anchor_right = 0.948387
+anchor_bottom = 0.961
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Switches" type="Control" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RightSwitch" type="TextureButton" parent="UI/Switches"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -54.0
+offset_top = -57.0
+offset_bottom = 57.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("2_v4k6o")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LeftSwitch" type="TextureButton" parent="UI/Switches"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -57.0
+offset_right = 54.0
+offset_bottom = 57.0
+grow_vertical = 2
+texture_normal = ExtResource("2_v4k6o")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
+
+[node name="MakeMove" type="Button" parent="UI/Switches"]
+layout_mode = 0
+anchor_left = 0.556452
+anchor_top = 0.908
+anchor_right = 0.974194
+anchor_bottom = 0.981
+metadata/_edit_group_ = true
+
+[node name="GreenBG" type="ColorRect" parent="UI/Switches/MakeMove"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0509804, 1, 0, 1)
+
+[node name="CancelMove" type="Button" parent="UI/Switches"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 908.0
+offset_right = 296.0
+offset_bottom = 981.0
+metadata/_edit_group_ = true
+
+[node name="RedBG" type="ColorRect" parent="UI/Switches/CancelMove"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="StartTurn" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="Arrow" parent="." instance=ExtResource("4_3lrkh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0)
+visible = false
+
+[node name="Bush" parent="." instance=ExtResource("4_ayoqw")]
+visible = false
+
+[connection signal="pressed" from="UI/Switches/RightSwitch" to="." method="change_target" binds= [1]]
+[connection signal="pressed" from="UI/Switches/LeftSwitch" to="." method="change_target" binds= [-1]]
+[connection signal="pressed" from="UI/Switches/MakeMove" to="." method="_on_make_move_pressed"]
+[connection signal="pressed" from="UI/Switches/CancelMove" to="." method="_on_cancel_move_pressed"]
+[connection signal="timeout" from="StartTurn" to="." method="_on_start_turn_timeout"]

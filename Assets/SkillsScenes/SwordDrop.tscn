@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cadl2h2di6avy"]
+
+[ext_resource type="Script" path="res://Assets/SkillsScenes/SwordDrop.gd" id="1_8em8p"]
+[ext_resource type="PackedScene" uid="uid://cei3qgju2d2d" path="res://Assets/Skills/sword.glb" id="1_kkdhl"]
+
+[node name="SwordDrop" type="Node3D"]
+script = ExtResource("1_8em8p")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_kkdhl")]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="FreeTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="FreeTimer" to="." method="_on_free_timer_timeout"]

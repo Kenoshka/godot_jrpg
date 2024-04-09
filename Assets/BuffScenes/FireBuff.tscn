@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnl1ck77wlmn2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2dat7"]
+shading_mode = 0
+vertex_color_use_as_albedo = true
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_jqmnc"]
+material = SubResource("StandardMaterial3D_2dat7")
+size = Vector2(0.1, 0.1)
+
+[sub_resource type="Curve" id="Curve_h8uwd"]
+max_value = 2.0
+_data = [Vector2(0, 2), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_261j6"]
+offsets = PackedFloat32Array(0.666667, 0.8, 0.94)
+colors = PackedColorArray(1, 0, 0, 1, 1, 0.25, 0, 1, 1, 1, 0, 1)
+
+[node name="FireBuff" type="CPUParticles3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.250372, 0, 0)
+cast_shadow = 0
+amount = 20
+mesh = SubResource("QuadMesh_jqmnc")
+emission_shape = 1
+emission_sphere_radius = 1.0
+gravity = Vector3(0, 5, 0)
+scale_amount_curve = SubResource("Curve_h8uwd")
+color_ramp = SubResource("Gradient_261j6")

@@ -1,0 +1,166 @@
+[gd_scene load_steps=10 format=3 uid="uid://c1qebl725mo84"]
+
+[ext_resource type="Texture2D" uid="uid://cpeoacgbvaxgr" path="res://Assets/Skills/magic_ring_-_yellow_0.png" id="1_88bv7"]
+[ext_resource type="Script" path="res://Assets/SkillsScenes/YellowCircle.gd" id="1_r3187"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v52eu"]
+resource_name = "Material.001"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_88bv7")
+roughness = 0.949505
+emission_enabled = true
+emission = Color(1, 1, 0.341176, 1)
+emission_energy_multiplier = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xd47a"]
+_surfaces = [{
+"aabb": AABB(-1.13072, -1.13072, 0, 2.26144, 2.26144, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4kxxn"]
+resource_name = "Sketchfab_Scene_Plane_0"
+_surfaces = [{
+"aabb": AABB(-1.13072, -1.13072, 0, 2.26144, 2.26144, 1e-05),
+"attribute_data": PackedByteArray(207, 3, 242, 4, 234, 249, 242, 4, 234, 249, 12, 251, 207, 3, 12, 251),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"material": SubResource("StandardMaterial3D_v52eu"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 254, 127, 255, 255, 0, 0, 0, 0, 254, 127, 255, 255, 255, 255, 0, 0, 254, 127, 0, 0, 255, 255, 0, 0, 254, 127, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_xd47a")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_t07pn"]
+_surfaces = [{
+"aabb": AABB(-0.72419, -0.80384, -0.03004, 1.45529, 1.62381, 0.74714),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0, 4, 0, 6, 0, 5, 0, 4, 0, 7, 0, 6, 0, 8, 0, 10, 0, 9, 0, 8, 0, 11, 0, 10, 0, 12, 0, 14, 0, 13, 0, 12, 0, 15, 0, 14, 0, 16, 0, 18, 0, 17, 0, 16, 0, 19, 0, 18, 0, 20, 0, 22, 0, 21, 0, 20, 0, 23, 0, 22, 0),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(0, 0, 33, 163, 105, 32, 0, 0, 250, 4, 120, 190, 105, 32, 0, 0, 250, 4, 120, 190, 159, 92, 0, 0, 0, 0, 33, 163, 159, 92, 0, 0, 198, 119, 150, 252, 76, 184, 0, 0, 208, 132, 174, 250, 65, 230, 0, 0, 135, 109, 22, 254, 255, 255, 0, 0, 125, 96, 255, 255, 9, 210, 0, 0, 155, 245, 130, 189, 84, 89, 0, 0, 119, 231, 32, 207, 54, 89, 0, 0, 112, 231, 41, 207, 95, 147, 0, 0, 148, 245, 139, 189, 125, 147, 0, 0, 147, 252, 55, 74, 51, 120, 0, 0, 255, 255, 1, 93, 210, 143, 0, 0, 36, 253, 83, 77, 248, 202, 0, 0, 183, 249, 137, 58, 90, 179, 0, 0, 69, 123, 13, 5, 73, 24, 0, 0, 118, 142, 63, 2, 0, 0, 0, 0, 212, 157, 0, 0, 153, 58, 0, 0, 163, 138, 206, 2, 227, 82, 0, 0, 229, 21, 63, 46, 118, 146, 0, 0, 229, 21, 63, 46, 41, 84, 0, 0, 191, 8, 160, 62, 41, 84, 0, 0, 191, 8, 160, 62, 118, 146, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1ff0d"]
+resource_name = "Sketchfab_Scene_Plane_006_0"
+_surfaces = [{
+"aabb": AABB(-0.72419, -0.80384, -0.03004, 1.45529, 1.62381, 0.74714),
+"attribute_data": PackedByteArray(107, 91, 51, 173, 147, 104, 51, 173, 147, 104, 89, 186, 107, 91, 89, 186, 95, 160, 105, 172, 181, 166, 185, 183, 167, 157, 16, 189, 82, 151, 193, 177, 230, 193, 214, 122, 237, 193, 35, 133, 56, 181, 40, 133, 50, 181, 219, 122, 220, 156, 151, 67, 229, 165, 191, 72, 91, 158, 171, 85, 81, 149, 130, 80, 173, 91, 206, 69, 42, 101, 58, 67, 164, 103, 108, 81, 40, 94, 0, 84, 69, 61, 53, 123, 225, 74, 53, 123, 225, 74, 201, 132, 69, 61, 201, 132),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0, 4, 0, 6, 0, 5, 0, 4, 0, 7, 0, 6, 0, 8, 0, 10, 0, 9, 0, 8, 0, 11, 0, 10, 0, 12, 0, 14, 0, 13, 0, 12, 0, 15, 0, 14, 0, 16, 0, 18, 0, 17, 0, 16, 0, 19, 0, 18, 0, 20, 0, 22, 0, 21, 0, 20, 0, 23, 0, 22, 0),
+"material": SubResource("StandardMaterial3D_v52eu"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(0, 0, 33, 163, 105, 32, 93, 46, 250, 4, 120, 190, 105, 32, 93, 46, 250, 4, 120, 190, 159, 92, 93, 46, 0, 0, 33, 163, 159, 92, 93, 46, 198, 119, 150, 252, 76, 184, 117, 63, 208, 132, 174, 250, 65, 230, 116, 63, 135, 109, 22, 254, 255, 255, 117, 63, 125, 96, 255, 255, 9, 210, 117, 63, 155, 245, 130, 189, 84, 89, 40, 60, 119, 231, 32, 207, 54, 89, 40, 60, 112, 231, 41, 207, 95, 147, 40, 60, 148, 245, 139, 189, 125, 147, 40, 60, 147, 252, 55, 74, 51, 120, 92, 46, 255, 255, 1, 93, 210, 143, 92, 46, 36, 253, 83, 77, 248, 202, 92, 46, 183, 249, 137, 58, 90, 179, 92, 46, 69, 123, 13, 5, 73, 24, 210, 61, 118, 142, 63, 2, 0, 0, 210, 61, 212, 157, 0, 0, 153, 58, 210, 61, 163, 138, 206, 2, 227, 82, 210, 61, 229, 21, 63, 46, 118, 146, 40, 60, 229, 21, 63, 46, 41, 84, 40, 60, 191, 8, 160, 62, 41, 84, 40, 60, 191, 8, 160, 62, 118, 146, 40, 60, 75, 40, 104, 47, 75, 40, 104, 47, 75, 40, 104, 47, 75, 40, 104, 47, 208, 17, 25, 133, 208, 17, 23, 133, 208, 17, 25, 133, 208, 17, 27, 133, 43, 178, 21, 25, 43, 178, 22, 25, 43, 178, 21, 25, 43, 178, 21, 25, 75, 40, 104, 47, 74, 40, 104, 47, 75, 40, 104, 47, 75, 40, 104, 47, 202, 29, 247, 120, 202, 29, 247, 120, 202, 29, 247, 120, 202, 29, 247, 120, 43, 178, 21, 25, 43, 178, 21, 25, 43, 178, 21, 25, 43, 178, 21, 25)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_t07pn")
+
+[sub_resource type="Animation" id="Animation_8vpqm"]
+resource_name = "Take 01"
+length = 2.0
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sketchfab_model/Root/Plane_006")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.0333333, 1, 0, 0, 0, 1, 0.0666667, 1, 0, 0, 0.0271206, 0.999632, 1.46667, 1, 0, 0, 0.999691, 0.0248596, 1.5, 1, 0, 0, -0.999936, 0.0113, 2.93333, 1, 0, 0, -0.00452106, 0.99999, 4.4, 1, 0, 0, 0.999875, -0.0158211, 4.43333, 1, 0, 0, -0.998649, 0.0519609, 5.8, 1, 0, 0, -0.0361582, 0.999346, 5.83333, 1, 0, 0, 0, 1)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sketchfab_model/Root/Plane")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.0333333, 1, 0, 0, 0, 1, 0.0666667, 1, 0, 0, 0.0135612, 0.999908, 2.93333, 1, 0, 0, 0.999997, 0.00226037, 2.96667, 1, 0, 0, -0.999875, 0.0158223, 5.8, 1, 0, 0, -0.0180816, 0.999837, 5.83333, 1, 0, 0, 0, 1)
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sketchfab_model/Root/Plane/Plane_0:mesh:surface_0/material:albedo_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OmniLight3D:light_energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [10.0, 10.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dg7wp"]
+_data = {
+"Take 01": SubResource("Animation_8vpqm")
+}
+
+[node name="Sketchfab_Scene" type="Node3D"]
+script = ExtResource("1_r3187")
+
+[node name="Sketchfab_model" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, 0, 0)
+
+[node name="Root" type="Node3D" parent="Sketchfab_model"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+
+[node name="Plane" type="Node3D" parent="Sketchfab_model/Root"]
+transform = Transform3D(2.99028, 0, 0, 0, 2.99028, 0, 0, 0, 2.99028, 0, 0, 0)
+
+[node name="Plane_0" type="MeshInstance3D" parent="Sketchfab_model/Root/Plane"]
+mesh = SubResource("ArrayMesh_4kxxn")
+skeleton = NodePath("")
+
+[node name="Plane_006" type="Node3D" parent="Sketchfab_model/Root"]
+transform = Transform3D(2.99028, 0, 0, 0, 2.99028, 0, 0, 0, 2.99028, 0, 0, 0.03874)
+
+[node name="Plane_006_0" type="MeshInstance3D" parent="Sketchfab_model/Root/Plane_006"]
+mesh = SubResource("ArrayMesh_1ff0d")
+skeleton = NodePath("")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_dg7wp")
+}
+autoplay = "Take 01"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(1, 1, 0, 1)
+light_energy = 10.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
